@@ -7,12 +7,22 @@ public class StackStuff {
             chars.push(input.charAt(i));
         }
 
-        String output = "";
-        while (!chars.isEmpty()) {
-            output = output + chars.pop();
+        char[] output = new char[chars.size()];
+        for (int i = 0; i < output.length; i++) {
+            output[i] = chars.pop();
         }
 
-        return output;
+        return String.valueOf(output);
+    }
+
+    public static String reverseStringNoStack(String input) {
+        char[] chars = input.toCharArray();
+        char[] output = new char[chars.length];
+        for (int i = 0; i < chars.length; i++) {
+            output[i] = chars[chars.length - 1 - i];
+        }
+
+        return String.valueOf(output);
     }
 
     public static boolean isPalindrome(String input) {
