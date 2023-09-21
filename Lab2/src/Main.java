@@ -5,8 +5,7 @@ public class Main {
         Scanner input = new Scanner(System.in);
         System.out.println("String to test?");
         String text = input.nextLine();
-        System.out.println(StackStuff.reverseString(text));
-        System.out.println(StackStuff.reverseStringNoStack(text));
+        System.out.println("Reversed string: " + StackStuff.reverseString(text));
         System.out.println("String is " + (StackStuff.isPalindrome(text) ? "" : "not ") + "a palindrome");
         System.out.println("String is " + (StackStuff.isBalanced(text) ? "" : "not ") + "balanced");
         try {
@@ -14,5 +13,6 @@ public class Main {
         } catch (IllegalArgumentException unused) {
             System.out.println("Unable to evaluate postfix");
         }
+        System.out.println("Infix to postfix: " + StackStuff.infixToPostfix(text));
     }
 }
