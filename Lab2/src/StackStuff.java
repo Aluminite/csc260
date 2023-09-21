@@ -25,6 +25,28 @@ public class StackStuff {
         return String.valueOf(output);
     }
 
+    public static int evaluatePostfix(String input) {
+        char[] chars = input.toCharArray();
+        Stack<Integer> numbers = new Stack<>();
+        for (char c : chars) {
+            if (c >= '0' && c <= '9') {
+                numbers.push(c - 0x30); // convert the 0-9 char to an int by subtracting 0x30
+            } else {
+                if (numbers.isEmpty()) throw new IllegalArgumentException("Stack is empty, invalid expression");
+                int operand1 = numbers.pop();
+                int operand2 = numbers.pop();
+                switch (c) {
+                    case '+' -> numbers.push(operand2 + operand1);
+                    case '-' -> numbers.push(operand2 - operand1);
+                    case '*' -> numbers.push(operand2 * operand1);
+                    case '/' -> numbers.push(operand2 / operand1);
+                    default -> throw new IllegalArgumentException("Invalid character detected");
+                }
+            }
+        }
+        return numbers.pop();
+    }
+
     public static boolean isPalindrome(String input) {
         String lowercase = input.toLowerCase();
         return reverseString(lowercase).equals(lowercase);

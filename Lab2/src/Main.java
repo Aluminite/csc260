@@ -9,5 +9,10 @@ public class Main {
         System.out.println(StackStuff.reverseStringNoStack(text));
         System.out.println("String is " + (StackStuff.isPalindrome(text) ? "" : "not ") + "a palindrome");
         System.out.println("String is " + (StackStuff.isBalanced(text) ? "" : "not ") + "balanced");
+        try {
+            System.out.println("Postfix evaluation of string is " + StackStuff.evaluatePostfix(text));
+        } catch (IllegalArgumentException unused) {
+            System.out.println("Unable to evaluate postfix");
+        }
     }
 }
