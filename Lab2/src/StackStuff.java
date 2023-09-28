@@ -15,14 +15,26 @@ public class StackStuff {
         return String.valueOf(output);
     }
 
-    public static String reverseStringNoStack(String input) {
+    public static int evaluatePostfix(String input) {
         char[] chars = input.toCharArray();
-        char[] output = new char[chars.length];
-        for (int i = 0; i < chars.length; i++) {
-            output[i] = chars[chars.length - 1 - i];
+        Stack<Integer> numbers = new Stack<>();
+        for (char c : chars) {
+            if (c >= '0' && c <= '9') {
+                numbers.push(c - 0x30); // convert the 0-9 char to an int by subtracting 0x30
+            } else {
+                if (numbers.isEmpty()) throw new IllegalArgumentException("Stack is empty, invalid expression");
+                int operand1 = numbers.pop();
+                int operand2 = numbers.pop();
+                switch (c) {
+                    case '+' -> numbers.push(operand2 + operand1);
+                    case '-' -> numbers.push(operand2 - operand1);
+                    case '*' -> numbers.push(operand2 * operand1);
+                    case '/' -> numbers.push(operand2 / operand1);
+                    default -> throw new IllegalArgumentException("Invalid character detected");
+                }
+            }
         }
-
-        return String.valueOf(output);
+        return numbers.pop();
     }
 
     public static boolean isPalindrome(String input) {
@@ -48,5 +60,31 @@ public class StackStuff {
         }
         // if there are still characters left in the stack afterward, it's not balanced
         return chars.isEmpty();
+    }
+
+    public static String infixToPostfix(String input) {
+        char[] inputChars = input.toCharArray();
+        Stack<Character> numbers = new Stack<>();
+        Stack<Character> others = new Stack<>();
+        for (char c : inputChars) {
+            if (c >= '0' && c <= '9') {
+                numbers.push(c);
+            } else {
+                others.push(c);
+            }
+        }
+
+        char[] output = new char[numbers.size() + others.size()];
+        int index = output.length - 1;
+        while (!others.isEmpty()) {
+            output[index] = others.pop();
+            index--;
+        }
+        while (!numbers.isEmpty()) {
+            output[index] = numbers.pop();
+            index--;
+        }
+
+        return String.valueOf(output);
     }
 }
