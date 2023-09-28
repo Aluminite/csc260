@@ -26,7 +26,7 @@ public class Main {
         }
     }
 
-    public static void addContact() {
+    private static void addContact() {
         System.out.print("Enter Name: ");
         String name = input.nextLine();
         for (Contact contact : contacts) {
@@ -47,7 +47,7 @@ public class Main {
         System.out.println("Contact added successfully!");
     }
 
-    public static void removeContact() {
+    private static void removeContact() {
         System.out.print("Enter Name: ");
         String name = input.nextLine();
         for (int i = 0; i < contacts.size(); i++) {
@@ -60,7 +60,7 @@ public class Main {
         System.out.println("Contact not found.");
     }
 
-    public static void searchContact() {
+    private static void searchContact() {
         System.out.print("Enter Name: ");
         String name = input.nextLine();
         for (Contact contact : contacts) {
@@ -72,7 +72,7 @@ public class Main {
         System.out.println("Contact not found.");
     }
 
-    public static void listContacts() {
+    private static void listContacts() {
         if (contacts.isEmpty()) {
             System.out.println("No contacts in the system.");
             return;
