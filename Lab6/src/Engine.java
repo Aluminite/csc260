@@ -14,6 +14,6 @@ public class Engine implements RailCar {
     }
 
     public String toString() {
-        return String.format("Coach car, %s", info);
+        return String.format("Engine car, %s", info);
     }
 }
