@@ -34,9 +34,9 @@ public class DoubleLinkedList<T> {
         } else { // Adding in middle
             Node<T> spliceNode = getNode(index - 1); // Will be added to the node after this
 
-            Node<T> newNode = new Node<>(spliceNode.next.next, spliceNode.next, data);
-            spliceNode.next.next.prev = newNode;
-            spliceNode.next.next = newNode;
+            Node<T> newNode = new Node<>(spliceNode.next, spliceNode, data);
+            spliceNode.next.prev = newNode;
+            spliceNode.next = newNode;
         }
 
         size++;

@@ -50,18 +50,16 @@ public class Main {
         System.out.println("""
                 How do you want to remove a song?
                 t to remove a song via title
-                p to remove a song via position
-                """);
+                p to remove a song via position""");
         switch (input.nextLine().toLowerCase()) {
             case "t" -> {
-                System.out.println("Please insert the title of the song. -> ");
+                System.out.print("Please insert the title of the song. -> ");
                 playlist.deleteByTitle(input.nextLine());
             }
             case "p" -> {
-                System.out.println("Please insert the position of the song. -> ");
+                System.out.print("Please insert the position of the song. -> ");
                 playlist.deleteAtPosition(Integer.parseInt(input.nextLine()));
             }
-
         }
     }
 
@@ -70,16 +68,15 @@ public class Main {
         System.out.println("""
                 How do you want to search for a song?
                 t to search via title
-                p to search via position
-                """);
+                p to search via position""");
         switch (input.nextLine()) {
             case "t" -> {
-                System.out.println("Please insert the title of the song. -> ");
+                System.out.print("Please insert the title of the song. -> ");
                 songPos = playlist.searchByTitle(input.nextLine());
 
             }
             case "p" -> {
-                System.out.println("Please insert the position of the song. -> ");
+                System.out.print("Please insert the position of the song. -> ");
                 songPos = Integer.parseInt(input.nextLine());
 
             }

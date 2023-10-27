@@ -46,7 +46,7 @@ public class Playlist {
 
     public String displayBackward() {
         StringBuilder text = new StringBuilder();
-        DoubleLinkedList.Node<Song> node = list.head;
+        DoubleLinkedList.Node<Song> node = list.tail;
         int index = list.size() - 1;
         while (node != null) {
             text.append(String.format("%d. %s%n", index, node.data.toString()));
