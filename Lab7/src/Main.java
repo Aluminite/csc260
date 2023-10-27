@@ -80,8 +80,9 @@ public class Main {
         int appointmentIndex = findAppointmentByPatientName(department, name);
         if (appointmentIndex == -1) {
             System.out.println("Could not find an appointment for that patient.");
+        } else {
+            department.remove(appointmentIndex);
         }
-        department.remove(appointmentIndex);
     }
 
 
