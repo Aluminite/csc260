@@ -36,11 +36,13 @@ public class Task implements Comparable<Task> {
         this.priority = Objects.requireNonNull(priority, "Priority cannot be null");
     }
 
+    // Compares this Task to another Task object.
+    // LOW < MEDIUM < HIGH. When the Priority is the same, Tasks with a lower sequenceID go first.
     public int compareTo(Task other) {
         if (this.priority == other.priority) {
-            return this.sequenceID - other.sequenceID;
+            return other.sequenceID - this.sequenceID;
         }
-        return this.priority.compareTo(other.getPriority());
+        return this.priority.compareTo(other.priority);
     }
 
     public String toString() {
