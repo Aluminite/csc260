@@ -1,3 +1,5 @@
+package party.mrow.prioritytaskmanager;
+
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -15,7 +17,7 @@ public class Main extends Application {
         Scene scene = new Scene(root);
         stage.setTitle("Priority Task Manager");
         stage.setScene(scene);
-        stage.getIcons().add(new Image(Objects.requireNonNull(Main.class.getResourceAsStream("/banana.png"))));
+        stage.getIcons().add(new Image(Objects.requireNonNull(getClass().getResourceAsStream("banana.png"))));
         stage.show();
     }
 

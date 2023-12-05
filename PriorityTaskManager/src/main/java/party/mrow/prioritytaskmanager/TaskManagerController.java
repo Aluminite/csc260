@@ -1,3 +1,5 @@
+package party.mrow.prioritytaskmanager;
+
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
@@ -12,7 +14,7 @@ import javafx.stage.Window;
 import java.io.*;
 import java.util.Optional;
 
-public class TestController {
+public class TaskManagerController {
 
     @FXML
     private GridPane gridPane;
