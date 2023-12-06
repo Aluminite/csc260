@@ -4,33 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="62c675a7-986f-4f7b-ae05-5774e63cd72d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../PriorityTaskManagerJFXold/PriorityTaskManagerJFX.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+    <list default="true" id="62c675a7-986f-4f7b-ae05-5774e63cd72d" name="Changes" comment="Move to Maven">
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PriorityTaskManager.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Priority.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Task.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TaskStorage.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PriorityTaskManagerJFX/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PriorityTaskManagerJFX/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PriorityTaskManagerJFX/.idea/libraries/lib.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PriorityTaskManagerJFX/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PriorityTaskManagerJFX/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PriorityTaskManagerJFX/.idea/uiDesigner.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PriorityTaskManagerJFX/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PriorityTaskManagerJFX/PriorityTaskManagerJFX.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PriorityTaskManagerJFX/src/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PriorityTaskManagerJFX/src/PriorityTaskManager.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PriorityTaskManagerJFX/src/Task.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PriorityTaskManagerJFX/src/TaskPriority.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PriorityTaskManagerJFX/src/TaskStorage.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PriorityTaskManagerJFX/src/TestController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PriorityTaskManagerJFX/src/banana.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/party/mrow/prioritytaskmanager/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/party/mrow/prioritytaskmanager/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/party/mrow/prioritytaskmanager/TaskManagerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/party/mrow/prioritytaskmanager/TaskManagerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/party/mrow/prioritytaskmanager/TaskPriority.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/party/mrow/prioritytaskmanager/TaskPriority.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/party/mrow/prioritytaskmanager/PriorityTaskManager.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/party/mrow/prioritytaskmanager/PriorityTaskManager.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,35 +34,44 @@
       </MavenGeneralSettings>
     </option>
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "customColor": "",
-  "associatedIndex": 2
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 2
+}</component>
   <component name="ProjectId" id="2Z6yWUfn6v2xZ0nCeQrzdionGpm" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "master",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "project.structure.last.edited": "Artifacts",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.2",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Artifacts&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\lucas\IdeaProjects\csc260\PriorityTaskManager\src\main\resources\party\mrow\prioritytaskmanager" />
     </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="Launcher" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="party.mrow.prioritytaskmanager.Launcher" />
+      <module name="PriorityTaskManager" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -92,21 +81,37 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1701756856061</updated>
-      <workItem from="1701756856985" duration="3144000" />
+      <workItem from="1701756856985" duration="3268000" />
+      <workItem from="1701814364940" duration="1370000" />
+      <workItem from="1701830243551" duration="5578000" />
     </task>
+    <task id="LOCAL-00001" summary="Move to Maven">
+      <option name="closed" value="true" />
+      <created>1701760069437</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1701760069437</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <breakpoint enabled="true" type="java-exception">
-          <properties class="java.lang.NullPointerException" package="java.lang" />
-          <option name="timeStamp" value="1" />
-        </breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Move to Maven" />
+    <option name="LAST_COMMIT_MESSAGE" value="Move to Maven" />
   </component>
 </project>

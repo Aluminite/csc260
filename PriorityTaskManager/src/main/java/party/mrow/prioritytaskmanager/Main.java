@@ -18,6 +18,7 @@ public class Main extends Application {
         stage.setTitle("Priority Task Manager");
         stage.setScene(scene);
         stage.getIcons().add(new Image(Objects.requireNonNull(getClass().getResourceAsStream("banana.png"))));
+        stage.setResizable(false);
         stage.show();
     }
 
