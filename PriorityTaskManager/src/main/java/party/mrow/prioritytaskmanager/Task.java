@@ -11,17 +11,14 @@ public class Task implements Comparable<Task>, Serializable {
     // The task's priority. Always LOW, MEDIUM, or HIGH.
     private TaskPriority priority;
 
-    // Used to determine which tasks were created first. Starts at 0 and counts up.
+    // Used to determine which tasks were created first.
+    // Should start at 0 for the first task and count up.
     public final int sequenceID;
 
-    private static int sequenceNum = 0;
-
-    public Task(String info, TaskPriority priority) {
+    public Task(String info, TaskPriority priority, int sequenceID) {
         this.info = Objects.requireNonNull(info, "Info cannot be null");
         this.priority = Objects.requireNonNull(priority, "Priority cannot be null");
-
-        this.sequenceID = sequenceNum;
-        sequenceNum++;
+        this.sequenceID = sequenceID;
     }
 
     public String getInfo() {
@@ -41,7 +38,8 @@ public class Task implements Comparable<Task>, Serializable {
     }
 
     // Compares this Task to another Task object.
-    // LOW < MEDIUM < HIGH. When the Priority is the same, Tasks with a lower sequenceID go first.
+    // NONE < LOW < MEDIUM < HIGH < MAXIMUM.
+    // When the Priority is the same, Tasks with a lower sequenceID go first.
     public int compareTo(Task other) {
         if (this.priority == other.priority) {
             return other.sequenceID - this.sequenceID;

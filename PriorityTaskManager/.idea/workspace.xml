@@ -4,12 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="62c675a7-986f-4f7b-ae05-5774e63cd72d" name="Changes" comment="Move to Maven">
+    <list default="true" id="62c675a7-986f-4f7b-ae05-5774e63cd72d" name="Changes" comment="A few finishing touches">
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/party/mrow/prioritytaskmanager/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/party/mrow/prioritytaskmanager/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/party/mrow/prioritytaskmanager/Task.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/party/mrow/prioritytaskmanager/Task.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/party/mrow/prioritytaskmanager/TaskManagerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/party/mrow/prioritytaskmanager/TaskManagerController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/party/mrow/prioritytaskmanager/TaskPriority.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/party/mrow/prioritytaskmanager/TaskPriority.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/party/mrow/prioritytaskmanager/TaskStorage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/party/mrow/prioritytaskmanager/TaskStorage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/party/mrow/prioritytaskmanager/PriorityTaskManager.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/party/mrow/prioritytaskmanager/PriorityTaskManager.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -43,22 +44,28 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Artifacts&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.Launcher.executor": "Run",
+    "Maven.PriorityTaskManager [clean].executor": "Run",
+    "Maven.PriorityTaskManager [package].executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "master",
+    "kotlin-language-version-configured": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Artifacts",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\lucas\IdeaProjects\csc260\PriorityTaskManager\src\main\resources\party\mrow\prioritytaskmanager" />
@@ -73,6 +80,13 @@
       </method>
     </configuration>
   </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="jdk-17.0.9-corretto-17.0.9-3183f394aec4-8f899f12" />
+      </set>
+    </attachedChunks>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -83,7 +97,8 @@
       <updated>1701756856061</updated>
       <workItem from="1701756856985" duration="3268000" />
       <workItem from="1701814364940" duration="1370000" />
-      <workItem from="1701830243551" duration="5578000" />
+      <workItem from="1701830243551" duration="6672000" />
+      <workItem from="1701911120165" duration="14209000" />
     </task>
     <task id="LOCAL-00001" summary="Move to Maven">
       <option name="closed" value="true" />
@@ -93,7 +108,15 @@
       <option name="project" value="LOCAL" />
       <updated>1701760069437</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="PriorityTaskManager is now feature-complete">
+      <option name="closed" value="true" />
+      <created>1701837797771</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1701837797771</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -112,6 +135,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Move to Maven" />
-    <option name="LAST_COMMIT_MESSAGE" value="Move to Maven" />
+    <MESSAGE value="PriorityTaskManager is now feature-complete" />
+    <MESSAGE value="A few finishing touches" />
+    <option name="LAST_COMMIT_MESSAGE" value="A few finishing touches" />
   </component>
 </project>

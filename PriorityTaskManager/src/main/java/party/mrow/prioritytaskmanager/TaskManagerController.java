@@ -33,29 +33,29 @@ public class TaskManagerController {
     @FXML
     void addButtonClicked() {
         if (priorityChooser.getValue() != null) {
-            Task newTask = new Task(taskInfoField.getText(), priorityChooser.getValue());
+            Task newTask = new Task(taskInfoField.getText(), priorityChooser.getValue(), storage.nextSequenceID());
             storage.todo.add(newTask);
+            taskInfoField.clear();
+            priorityChooser.setValue(null);
             fillTaskGrid();
         } else {
-            new Alert(Alert.AlertType.INFORMATION, "You have to choose a priority for the task.",
+            new Alert(Alert.AlertType.INFORMATION, "You must use the dropdown to select a priority.",
                     ButtonType.OK).showAndWait();
         }
-
-        taskInfoField.clear();
-        priorityChooser.setValue(null);
     }
 
     @FXML
     void getNextTask() {
-        Task nextTask = storage.todo.poll();
-        fillTaskGrid();
+        Task nextTask = storage.todo.poll(); // Will return null if the queue is empty.
+
         if (nextTask == null) {
             new Alert(Alert.AlertType.ERROR, "There are no more tasks.", ButtonType.OK).showAndWait();
         } else {
-            String taskString = String.format("%s%nwith priority %s", nextTask.getInfo(), nextTask.getPriority());
-            Alert taskAlert = new Alert(Alert.AlertType.NONE, String.format("Your next task is:%n%s", taskString),
-                    ButtonType.OK);
-            taskAlert.showAndWait();
+            fillTaskGrid();
+
+            String taskString = String.format("%s%n(%s priority)", nextTask.getInfo(), nextTask.getPriority());
+            new Alert(Alert.AlertType.NONE, String.format("Your next task is:%n%s", taskString),
+                    ButtonType.OK).showAndWait();
         }
     }
 
@@ -68,7 +68,8 @@ public class TaskManagerController {
         File saveFile = fileChooser.showSaveDialog(window);
 
         if (saveFile == null) return; // File will be null if the user cancels
-        try (FileOutputStream fos = new FileOutputStream(saveFile);
+
+        try (FileOutputStream fos = new FileOutputStream(saveFile); // Open the file for writing
              ObjectOutputStream oos = new ObjectOutputStream(fos)) {
             oos.writeObject(storage);
             oos.flush();
@@ -87,7 +88,8 @@ public class TaskManagerController {
         File loadFile = fileChooser.showOpenDialog(window);
 
         if (loadFile == null) return; // File will be null if the user cancels
-        try (FileInputStream fis = new FileInputStream(loadFile);
+
+        try (FileInputStream fis = new FileInputStream(loadFile); // Open and read the file
              ObjectInputStream ois = new ObjectInputStream(fis)) {
             Object loaded = ois.readObject();
             try {
@@ -111,7 +113,7 @@ public class TaskManagerController {
 
         if (result.isPresent() && result.get() == ButtonType.YES) {
             storage = new TaskStorage();
-            gridPane.getChildren().clear();
+            fillTaskGrid(); // Refreshes the GUI
         }
     }
 
@@ -123,7 +125,7 @@ public class TaskManagerController {
 
     public void fillTaskGrid() {
         // Yes, this completely recreates the task grid every time it's called.
-        // Yes, probably it could be much more efficient.
+        // Yes, it could probably be much more efficient.
         // This is much easier, though.
         gridPane.getChildren().clear();
         Task[] tasks = storage.todoToArraySorted();
